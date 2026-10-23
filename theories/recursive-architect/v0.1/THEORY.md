@@ -46,19 +46,19 @@ This sequence is **coherent as a conditional account**, provided the claimed imm
 
 Let C_t be the conversation context made available at step t, O_t be the generated model output, and U_t be the person's choice to adopt, reject, revise, or implement suggestions.
 
-\`\`\`text
+```text
 C_t   = Context(H_t as expressed in messages, prior dialogue, available records)
 O_t   = Generate(M_t, C_t)
 P_t+1 = Implement(P_t, U_t, O_t, E_t)
 H_t+1 = Interpret(H_t, O_t, P_t+1, E_t)
 C_t+1 = UpdateContext(C_t, H_t+1 as expressed, P_t+1 as referenced)
-\`\`\`
+```
 
 The **recursive** element is that the products of one iteration can condition the next. This is stronger than a one-off influence yet makes no claim of autonomous model-weight modification. The base model's parameters may be unchanged across iterations; changes can occur in context, project artifacts, decisions, and the human self-model.
 
 A minimal causal candidate is:
 
-\`\`\`text
+```text
 Human framing H_t
     → prompts/context C_t
     → AI outputs O_t
@@ -66,7 +66,7 @@ Human framing H_t
     → revised self-description H_t+1
     → later inputs C_t+1
     → ...
-\`\`\`
+```
 
 The slogan "the Architect architected the Architect" names this **loop of mediated authorship**, not the logically invalid equation "A was created by M." More precisely: an AI acting as an architectural collaborator may contribute to the language through which the human bearer of the Architect identity describes that identity.
 
