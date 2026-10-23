@@ -8,6 +8,7 @@ A case-specific research draft on the reciprocal shaping of the public Architect
 - [AUDIT.md](AUDIT.md): public-claim consistency matrix and unresolved tensions.
 - [CLAIMS.json](CLAIMS.json): machine-readable provenance, scope, claims and evidence state.
 - [contracts/RecursiveArchitectDeclaration.sol](contracts/RecursiveArchitectDeclaration.sol): minimalist proposed content-hash declaration, **not deployed**.
+- [validate.mjs](validate.mjs): zero-dependency structural checks (`node validate.mjs`) and a deliberately blocking canonical release gate (`node validate.mjs --release`).
 
 **Version:** 0.1.0-draft · **Date:** 2026-10-23 · **Review state:** work in progress.
 
